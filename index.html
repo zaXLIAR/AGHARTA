@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agartha Gateway</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-900 to-indigo-800 min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full p-8 bg-gray-900 bg-opacity-70 rounded-xl shadow-2xl backdrop-blur-sm border border-purple-500 border-opacity-30">
+        <div class="text-center mb-8">
+            <div class="w-24 h-24 mx-auto mb-4 bg-purple-700 rounded-full flex items-center justify-center shadow-lg">
+                <i data-feather="key" class="text-purple-200 w-12 h-12"></i>
+            </div>
+            <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-2">TOP SICRET</h1>
+            <p class="text-purple-200">State your name to begin the initiation</p>
+        </div>
+        
+        <form id="nameForm" class="space-y-6">
+            <div>
+                <input type="text" id="userName" placeholder="Your true name" required 
+                class="w-full px-4 py-3 bg-gray-800 border border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent text-white placeholder-purple-300">
+            </div>
+            <button type="submit" 
+            class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02]">
+                Confirm & Proceed
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>

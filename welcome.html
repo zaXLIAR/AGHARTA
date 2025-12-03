@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agartha Initiation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-900 to-indigo-800 min-h-screen flex items-center justify-center fade-in">
+    <div class="max-w-md w-full p-8 bg-gray-900 bg-opacity-70 rounded-xl shadow-2xl backdrop-blur-sm border border-purple-500 border-opacity-30">
+        <div class="text-center mb-8">
+            <div class="w-24 h-24 mx-auto mb-4 bg-purple-700 rounded-full flex items-center justify-center shadow-lg animate-pulse-glow">
+                <i data-feather="lock" class="text-purple-200 w-12 h-12"></i>
+            </div>
+            <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-2">
+                Welcome to Agartha, <span id="displayName" class="capitalize"></span>
+            </h1>
+            <p class="text-purple-200">To proceed, you must affirm the sacred covenants</p>
+        </div>
+        
+        <form id="oathForm" class="space-y-6">
+            <div class="space-y-4">
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="age" name="age" type="checkbox" required 
+                        class="h-4 w-4 text-purple-600 bg-gray-800 border-purple-500 rounded focus:ring-purple-500">
+                    </div>
+                    <label for="age" class="ml-3 block text-sm font-medium text-purple-200">
+                        I am older than 16 years
+                    </label>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="loyalty" name="loyalty" type="checkbox" required 
+                        class="h-4 w-4 text-purple-600 bg-gray-800 border-purple-500 rounded focus:ring-purple-500">
+                    </div>
+                    <label for="loyalty" class="ml-3 block text-sm font-medium text-purple-200">
+                        I pledge my eternal loyalty to Agartha
+                    </label>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="epstein" name="epstein" type="checkbox" required 
+                        class="h-4 w-4 text-purple-600 bg-gray-800 border-purple-500 rounded focus:ring-purple-500">
+                    </div>
+                    <label for="epstein" class="ml-3 block text-sm font-medium text-purple-200">
+                        I am not listed in the Epstein files
+                    </label>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="truth" name="truth" type="checkbox" required 
+                        class="h-4 w-4 text-purple-600 bg-gray-800 border-purple-500 rounded focus:ring-purple-500">
+                    </div>
+                    <label for="truth" class="ml-3 block text-sm font-medium text-purple-200">
+                        I seek only truth and enlightenment
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit" 
+            class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02]">
+                Take the Oath & Continue
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        document.getElementById('displayName').textContent = localStorage.getItem('agarthaUserName');
+        
+        document.getElementById('oathForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = 'create-id.html';
+        });
+    </script>
+</body>
+</html>
